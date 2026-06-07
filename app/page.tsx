@@ -31,8 +31,8 @@ export default function Home() {
 <section className="hero">
   <div className="hero-left">
     <div className="hero-eyebrow">Aesthetic Clinic · Makassar</div>
-    <h1 className="hero-title">Cantikmu,</h1>
-    <h1 className="hero-title-line2"><em>Asli.</em></h1>
+    <h1 className="hero-title">Kulit Sehat,</h1>
+    <h1 className="hero-title-line2"><em>Mulai dari Sini.</em></h1>
     <p className="hero-desc">Klinik kecantikan di Makassar yang fokus bikin kulit kamu sehat, glowing, dan tetap natural — bukan sekadar kelihatan cantik.</p>
     <div className="hero-actions">
       <a href="#kontak" className="btn-primary">Mulai Konsultasi</a>
