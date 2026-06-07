@@ -9,9 +9,9 @@ const services = [
   {
     num: "01",
     name: "Laser &\nLight Therapy",
-    tagline: "Cahaya Presisi untuk Kulit Sempurna",
-    desc: "Treatment laser kami menggunakan teknologi terkini yang telah terbukti secara klinis. Setiap sesi dirancang untuk menargetkan masalah kulit spesifik — mulai dari hiperpigmentasi, bekas jerawat, pori membesar, hingga tekstur kulit yang tidak merata.",
-    detail: "Hasilnya kulit lebih cerah, halus, dan sehat tanpa downtime yang lama. Teknologi terkini kami memastikan treatment yang efektif namun tetap aman untuk semua jenis kulit.",
+    tagline: "Kulit Bersih, Tanpa Ribet",
+    desc: "Treatment laser yang bisa atasi berbagai masalah kulit — dari bintik hitam, bekas jerawat, pori besar, sampe kulit kusam. Semuanya ditangani pakai teknologi laser terkini yang sudah terbukti aman.",
+    detail: "Kulit jadi lebih cerah dan halus tanpa harus istirahat lama. Cocok buat kamu yang mau hasil nyata tapi nggak mau ganggu aktivitas sehari-hari.",
     image: "/layanan-01.jpg",
     features: ["Pigmentasi & Bercak", "Bekas Jerawat", "Pori Besar", "Kulit Kusam"],
     duration: "45–60 min",
@@ -20,9 +20,9 @@ const services = [
   {
     num: "02",
     name: "Acne &\nSkin Clearing",
-    tagline: "Bebas Jerawat, Kulit Mulus Kembali",
-    desc: "Program penanganan jerawat kami bersifat komprehensif — dimulai dengan diagnosa jenis jerawat dan penyebabnya, lalu dirancang protokol perawatan yang meliputi chemical peeling, injeksi spot treatment, serta rangkaian skincare medis.",
-    detail: "Tujuannya bukan hanya menghilangkan jerawat, tapi mencegahnya datang kembali. Setiap program disesuaikan dengan tingkat keparahan dan kondisi kulit pasien.",
+    tagline: "Jerawat Hilang, Nggak Balik Lagi",
+    desc: "Program jerawat yang nangani langsung ke akar masalahnya. Dokter akan cek dulu jenis dan penyebab jerawat kamu, terus susun perawatan yang pas — mulai dari facial treatment sampe perawatan intensif yang disesuin sama kondisi kulit kamu.",
+    detail: "Bukan cuma ilangin jerawat yang ada, tapi juga cegah biar nggak dateng lagi. Setiap program beda-beda, karena kulit orang juga beda-beda.",
     image: "/layanan-02.jpg",
     features: ["Jerawat Aktif", "Bekas Jerawat", "Chemical Peeling", "Injeksi Spot"],
     duration: "30–45 min",
@@ -31,9 +31,9 @@ const services = [
   {
     num: "03",
     name: "Custom\nBrightening",
-    tagline: "Cerah dari Dalam, Bersinar dari Luar",
-    desc: "Brightening treatment kami bukan sekadar mencerahkan — tapi mengembalikan kesehatan kulit dari dalam. Setiap program dimulai dengan analisis kondisi kulit, lalu dirancang kombinasi treatment klinik beserta rangkaian skincare rumahan yang dipersonalisasi.",
-    detail: "Kombinasi IV therapy, laser, dan peel dirancang untuk bekerja sinergis mengembalikan radiance alami kulit kamu secara bertahap dan tahan lama.",
+    tagline: "Cerah Merata, Glowing Alami",
+    desc: "Treatment mencerahkan yang kerjanya dari dalam kulit, bukan cuma di permukaan. Dokter akan analisis dulu kondisi kulit kamu, terus susun kombinasi treatment di klinik plus skincare buat dirumah yang dipersonalisasi.",
+    detail: "Perpaduan IV therapy, laser, dan peel yang bekerja bareng buat balikin kilau alami kulit kamu — hasilnya gradual tapi tahan lama.",
     image: "/layanan-03.jpg",
     features: ["IV Therapy", "Brightening Laser", "Skincare Personal", "Program Jangka Panjang"],
     duration: "60–90 min",
@@ -42,9 +42,9 @@ const services = [
   {
     num: "04",
     name: "Micro Needling\n& RF",
-    tagline: "Stimulasi Kolagen, Kulit Lebih Kencang",
-    desc: "Micro Needling dengan Radio Frequency menggabungkan dua teknologi dalam satu treatment — microneedling untuk merangsang produksi kolagen alami, dan RF untuk mengencangkan kulit dari lapisan dalam.",
-    detail: "Hasilnya tekstur kulit lebih halus, pori mengecil, dan kulit terasa lebih kencang dan kenyal. Treatment ini ideal untuk anti-aging dan perbaikan tekstur kulit.",
+    tagline: "Kulit Kencang, Pori Mengecil",
+    desc: "Treatment yang gabungin dua teknologi sekaligus — microneedling buat stimulasi kolagen alami, dan RF buatencangkan kulit dari dalam. Hasilnya kulit lebih kenyal dan tekstur rata.",
+    detail: "Pori jadi lebih kecil, tekstur kulit lebih halus, dan rasanya lebih kencang. Cocok banget buat yang mulai khawatir sama tanda penuaan atau tekstur kulit nggak rata.",
     image: "/layanan-04.jpg",
     features: ["Stimulasi Kolagen", "Anti-Aging", "Pori Halus", "Tekstur Merata"],
     duration: "45–60 min",
@@ -53,9 +53,9 @@ const services = [
   {
     num: "05",
     name: "Skincare\nCustom",
-    tagline: "Formulasi Dokter untuk Rumahmu",
-    desc: "Rangkaian skincare Mugia diformulasikan langsung oleh tim dokter estetika kami. Setiap produk telah tersertifikasi BPOM dan dirancang untuk melengkapi treatment klinik.",
-    detail: "Tersedia dua rangkaian utama: Glowing Series untuk kulit kusam dan Acne Series untuk kulit berjerawat — masing-masing dengan formulasi yang tepat sasaran.",
+    tagline: "Skincare Dokter, Bukan Abal-abal",
+    desc: "Rangkaian skincare yang diformulasi langsung sama tim dokter estetika kami. Udah bersertifikat BPOM dan dirancang buat nemenin treatment kamu di klinik.",
+    detail: "Ada dua seri utama: Glowing Series buat kulit kusam, dan Acne Series buat kulit berjerawat. Tinggal pilih yang sesuai sama kebutuhan kulit kamu.",
     image: "/layanan-05.jpg",
     features: ["BPOM Certified", "Glowing Series", "Acne Series", "Doctor Formulated"],
     duration: "—",
@@ -64,13 +64,13 @@ const services = [
   {
     num: "06",
     name: "Konsultasi\nDokter",
-    tagline: "Langkah Pertama Menuju Kulit Sehat",
-    desc: "Setiap perawatan dimulai dengan konsultasi mendalam. Dokter estetika kami akan menganalisis kondisi kulitmu menggunakan peralatan diagnostik modern dan merancang program perawatan yang sesuai.",
-    detail: "Konsultasi pertama gratis. Kami percaya transparansi adalah kunci — dokter akan menjelaskan temuan secara terbuka dan merekomendasikan treatment yang benar-benar dibutuhkan.",
+    tagline: "Kenali Kulitmu, Mulai dari Sini",
+    desc: "Sebelum mulai treatment, dokter estetika kami akan cek kondisi kulit kamu secara detail. Nanti juga dibuatin program perawatan yang emang dirancang khusus buat kulit kamu.",
+    detail: "Kami percaya transparansi itu penting — dokter bakal jelasin semuanya secara terbuka dan cuma rekomendasiin treatment yang emang kamu butuhin, nggak lebih.",
     image: "/layanan-06.jpg",
-    features: ["Diagnostik Kulit", "Program Personal", "Konsultasi Gratis", "Follow-up Berkala"],
+    features: ["Cek Kondisi Kulit", "Program Personal", "Transparan & Jujur", "Follow-up Berkala"],
     duration: "30 min",
-    sessions: "Gratis",
+    sessions: "By Appointment",
   },
 ];
 
@@ -172,10 +172,10 @@ export default function LayananPage() {
         <div className="cta-label">Mulai Perjalananmu</div>
         <h2 className="cta-title reveal">Kulitmu Layak<br />Mendapat yang <em>Terbaik</em></h2>
         <p className="cta-sub reveal reveal-delay-1">
-          Konsultasi pertama gratis. Tim dokter kami siap membantu kamu menemukan program perawatan yang tepat sesuai kondisi kulitmu.
+          Tim dokter kami siap bantu kamu temukan program perawatan yang tepat sesuai kondisi kulitmu.
         </p>
         <div className="cta-actions reveal reveal-delay-2">
-          <a href="https://wa.me/62XXXXXXXXXX?text=Halo+Mugia+Clinic,+saya+ingin+konsultasi+gratis" className="btn-white" target="_blank" rel="noopener noreferrer">Chat via WhatsApp</a>
+          <a href="https://wa.me/62XXXXXXXXXX?text=Halo+Mugia+Clinic,+saya+ingin+konsultasi" className="btn-white" target="_blank" rel="noopener noreferrer">Chat via WhatsApp</a>
           <a href="tel:+62XXXXXXXXXX" className="btn-outline-white">Hubungi Kami</a>
         </div>
       </section>

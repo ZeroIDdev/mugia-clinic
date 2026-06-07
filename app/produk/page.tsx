@@ -10,7 +10,7 @@ const products = [
     id: 1,
     name: "Facial Wash Glowing",
     category: "Cleanser",
-    desc: "Pembersih wajah yang lembut dengan formula brightening — membersihkan kotoran dan minyak berlebih tanpa membuat kulit kering.",
+    desc: "Cuci muka yang bersih tapi tetap lembut — bikin wajah cerah tanpa bikin kulit ketarik atau kering. Cocok buat daily use.",
     price: "Rp 89.000",
     image: "/produk-01.jpg",
     badge: "Best Seller",
@@ -19,7 +19,7 @@ const products = [
     id: 2,
     name: "Facial Wash Acne",
     category: "Cleanser",
-    desc: "Pembersih wajah khusus kulit berjerawat dengan kandungan salicylic acid — mengontrol minyak dan mencegah jerawat baru.",
+    desc: "Untuk kulit yang sering berjerawat — bantu kontrol minyak berlebih dan cegah jerawat datang lagi. Pakai rutin, hasilnya keliatan.",
     price: "Rp 89.000",
     image: "/produk-02.jpg",
     badge: null,
@@ -28,7 +28,7 @@ const products = [
     id: 3,
     name: "Toner Glowing",
     category: "Toner",
-    desc: "Toner hydrating dengan niacinamide untuk mencerahkan dan mengecilkan pori — langkah penting setelah cleansing.",
+    desc: "Toner yang melembapkan sekaligus mencerahkan — pori-pori jadi keliatan lebih kecil. Wajib ada di routine setelah cuci muka.",
     price: "Rp 110.000",
     image: "/produk-03.jpg",
     badge: "New",
@@ -37,7 +37,7 @@ const products = [
     id: 4,
     name: "Toner Acne",
     category: "Toner",
-    desc: "Toner antibakteri dengan centella asiatica — menenangkan kulit iritasi dan mengurangi kemerahan akibat jerawat.",
+    desc: "Khusus kulit sensitif dan berjerawat — bikin kulit lebih tenang, kemerahan berangsur-angsur hilang. Gentle tapi efektif.",
     price: "Rp 110.000",
     image: "/produk-04.jpg",
     badge: null,
@@ -46,7 +46,7 @@ const products = [
     id: 5,
     name: "Sunscreen SPF 50",
     category: "Protection",
-    desc: "Sunscreen broad spectrum SPF 50 PA++++ — tekstur ringan, tidak white cast, cocok untuk pemakaian sehari-hari.",
+    desc: "Sunscreen yang nggak bikin wajah putih memutus — ringan, nggak lengket, dan cocok dipake setiap hari tanpa takut breakout.",
     price: "Rp 135.000",
     image: "/produk-05.jpg",
     badge: "Best Seller",
@@ -55,7 +55,7 @@ const products = [
     id: 6,
     name: "Night Cream",
     category: "Moisturizer",
-    desc: "Krim malam dengan retinol dan peptides — meregenerasi kulit saat tidur untuk bangun dengan kulit lebih kenyal dan cerah.",
+    desc: "Biar kulit bekerja terus saat kamu tidur — bangun pagi dengan wajah yang lebih kenyal, cerah, dan fresh. Ritual malam yang worth it.",
     price: "Rp 165.000",
     image: "/produk-06.jpg",
     badge: null,
@@ -100,7 +100,7 @@ export default function ProdukPage() {
       <section className="produk-intro">
         <div className="produk-intro-inner">
           <p className="reveal">
-            Rangkaian skincare Mugia diformulasikan langsung oleh tim dokter estetika kami. Setiap produk tersertifikasi BPOM, bebas bahan berbahaya, dan dirancang untuk melengkapi treatment klinik.
+            Skincare yang diformulasi langsung oleh dokter estetika — bukan sekadar produk, tapi bagian dari perawatan kulitmu. Sudah BPOM, aman, dan dirancang khusus buat kulit orang Indonesia.
           </p>
         </div>
       </section>
@@ -134,17 +134,17 @@ export default function ProdukPage() {
           <div className="produk-why-item reveal">
             <div className="produk-why-num">01</div>
             <h3 className="produk-why-title">Doctor Formulated</h3>
-            <p className="produk-why-desc">Setiap produk diformulasikan oleh dokter estetika berpengalaman dengan bahan aktif yang terbukti secara klinis.</p>
+            <p className="produk-why-desc">Bukan produk abal-abal — setiap formula diracik dokter estetika yang paham betul kebutuhan kulitmu.</p>
           </div>
           <div className="produk-why-item reveal reveal-delay-1">
             <div className="produk-why-num">02</div>
             <h3 className="produk-why-title">BPOM Certified</h3>
-            <p className="produk-why-desc">Semua produk telah terdaftar dan tersertifikasi BPOM — aman digunakan tanpa khawatir bahan berbahaya.</p>
+            <p className="produk-why-desc">Sudah terdaftar BPOM, jadi nggak perlu ragu soal keamanan bahan yang kamu pakai di kulit.</p>
           </div>
           <div className="produk-why-item reveal reveal-delay-2">
             <div className="produk-why-num">03</div>
             <h3 className="produk-why-title">Personalized Care</h3>
-            <p className="produk-why-desc">Rangkaian produk dirancang untuk saling melengkapi — konsultasi dokter memastikan kamu mendapat kombinasi yang tepat.</p>
+            <p className="produk-why-desc">Produknya dirancang saling melengkapi — dan dokter kami bantu pilihkan kombinasi yang paling pas buat kondisi kulitmu.</p>
           </div>
         </div>
       </section>
@@ -154,10 +154,10 @@ export default function ProdukPage() {
         <div className="cta-label">Mulai Perjalananmu</div>
         <h2 className="cta-title reveal">Kulitmu Layak<br />Mendapat yang <em>Terbaik</em></h2>
         <p className="cta-sub reveal reveal-delay-1">
-          Konsultasi pertama gratis. Tim dokter kami siap membantu kamu menemukan program perawatan yang tepat sesuai kondisi kulitmu.
+          Tim dokter kami siap bantu kamu cari skincare yang beneran cocok — sesuai jenis dan masalah kulitmu.
         </p>
         <div className="cta-actions reveal reveal-delay-2">
-          <a href="https://wa.me/62XXXXXXXXXX?text=Halo+Mugia+Clinic,+saya+ingin+konsultasi+gratis" className="btn-white" target="_blank" rel="noopener noreferrer">Chat via WhatsApp</a>
+          <a href="https://wa.me/62XXXXXXXXXX?text=Halo+Mugia+Clinic,+saya+ingin+konsultasi" className="btn-white" target="_blank" rel="noopener noreferrer">Chat via WhatsApp</a>
           <a href="tel:+62XXXXXXXXXX" className="btn-outline-white">Hubungi Kami</a>
         </div>
       </section>

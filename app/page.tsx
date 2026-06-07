@@ -33,7 +33,7 @@ export default function Home() {
     <div className="hero-eyebrow">Aesthetic Clinic · Makassar</div>
     <h1 className="hero-title">Cantikmu,</h1>
     <h1 className="hero-title-line2"><em>Ilmiah.</em></h1>
-    <p className="hero-desc">Klinik kecantikan estetika yang menggabungkan teknologi medis terkini dengan pendekatan personal — untuk kulit sehat yang bercahaya, bukan sekadar tampak cantik.</p>
+    <p className="hero-desc">Klinik kecantikan di Makassar yang fokus bikin kulit kamu sehat, glowing, dan tetap natural — bukan sekadar kelihatan cantik.</p>
     <div className="hero-actions">
       <a href="#kontak" className="btn-primary">Mulai Konsultasi</a>
       <a href="/layanan" className="btn-ghost">Lihat Layanan</a>
@@ -75,9 +75,9 @@ export default function Home() {
 <section className="philosophy" id="tentang">
   <div className="philosophy-text reveal">
     <div className="section-eyebrow">Filosofi Kami</div>
-    <h2 className="section-title">Kecantikan yang<br /><em>Terpercaya &</em><br /><strong>Berbasis Ilmu</strong></h2>
-    <p>Mugia Aesthetic Clinic lahir dari keyakinan bahwa setiap kulit adalah unik. Kami tidak menawarkan solusi generik — setiap treatment dirancang khusus berdasarkan kondisi kulitmu yang sesungguhnya.</p>
-    <p>Dipimpin oleh tim dokter berpengalaman dan didukung peralatan medis berstandar tinggi, kami memastikan setiap kunjungan menghasilkan perubahan yang nyata dan bertahan lama.</p>
+    <h2 className="section-title">Kecantikan yang<br /><em>Terpercaya &</em><br /><strong>Terbukti Hasilnya</strong></h2>
+    <p>Setiap kulit itu beda-beda, dan kami paham banget itu. Di Mugia, kamu nggak akan dapat treatment yang sama kayak orang lain — karena semuanya disesuaikan sama kondisi kulitmu.</p>
+    <p>Dokter-dokter kami berpengalaman dan peralatannya modern, jadi kamu nggak perlu khawatir. Yang pasti, hasilnya keliatan dan bikin pede.</p>
     <a href="/layanan" className="btn-primary">Lihat Semua Layanan →</a>
     <div className="philosophy-features">
       <div className="feature-pill">Peralatan Medis Modern</div>
@@ -102,43 +102,43 @@ export default function Home() {
       <div className="section-eyebrow reveal">Layanan Unggulan</div>
       <h2 className="section-title reveal reveal-delay-1">Treatment yang<br /><em>Menjawab</em> Kebutuhan<br /><strong>Kulitmu</strong></h2>
     </div>
-    <p className="services-desc reveal reveal-delay-2">Dari perawatan harian hingga treatment intensif — semua dirancang oleh dokter untuk hasil yang optimal dan aman.</p>
+    <p className="services-desc reveal reveal-delay-2">Dari facial ringan sampai treatment intensif — semua dirancang sama dokter supaya hasilnya bagus dan aman.</p>
   </div>
   <div className="services-grid">
     <div className="service-card reveal">
       <div className="service-num">01</div>
       <div className="service-name">Laser & Light Therapy</div>
-      <p className="service-desc">Teknologi laser terkini untuk mengatasi hiperpigmentasi, bekas jerawat, pori besar, dan tampilan kulit kusam secara efektif dan aman.</p>
+      <p className="service-desc">Bikin kulit cerah dan rata dengan teknologi laser modern — aman untuk bekas jerawat, flek, dan pori membesar.</p>
       <div className="service-arrow">→</div>
     </div>
     <div className="service-card reveal reveal-delay-1">
       <div className="service-num">02</div>
       <div className="service-name">Acne & Skin Clearing</div>
-      <p className="service-desc">Protokol khusus jerawat aktif dan bekas luka — kombinasi chemical peeling, injeksi, dan skincare medis yang terbukti secara klinis.</p>
+      <p className="service-desc">Solusi untuk jerawat aktif dan bekasnya — mulai dari facial khusus, treatment ringan, sampai skincare yang cocok buat kulit berminyak.</p>
       <div className="service-arrow">→</div>
     </div>
     <div className="service-card reveal reveal-delay-2">
       <div className="service-num">03</div>
       <div className="service-name">Custom Brightening</div>
-      <p className="service-desc">Program mencerahkan kulit yang dipersonalisasi — dari produk skincare home-care hingga treatment klinik yang saling melengkapi.</p>
+      <p className="service-desc">Program cerah alami yang bikin kulitmu glowing dari dalam — perawatan di klinik yang dikombinasikan sama skincare harian.</p>
       <div className="service-arrow">→</div>
     </div>
     <div className="service-card reveal">
       <div className="service-num">04</div>
       <div className="service-name">Micro Needling & RF</div>
-      <p className="service-desc">Stimulasi kolagen alami untuk kulit yang lebih kencang, pori halus, dan tekstur merata tanpa prosedur invasif.</p>
+      <p className="service-desc">Treatment micro needling buat stimulasi kolagen — kulit lebih kencang, pori mengecil, dan tekstur jadi halus.</p>
       <div className="service-arrow">→</div>
     </div>
     <div className="service-card reveal reveal-delay-1">
       <div className="service-num">05</div>
       <div className="service-name">Skincare Custom</div>
-      <p className="service-desc">Produk skincare Mugia yang diformulasikan oleh dokter — tersedia rangkaian Glowing dan Acne sesuai kondisi kulitmu.</p>
+      <p className="service-desc">Skincare khusus buatan dokter — ada rangkaian Glowing dan Acne yang udah BPOM dan pastinya aman buat kulitmu.</p>
       <div className="service-arrow">→</div>
     </div>
     <div className="service-card reveal reveal-delay-2">
       <div className="service-num">06</div>
       <div className="service-name">Konsultasi Dokter</div>
-      <p className="service-desc">Sesi konsultasi mendalam dengan dokter estetika kami — diagnosa kondisi kulit, rekomendasi treatment, dan program perawatan jangka panjang.</p>
+      <p className="service-desc">Ngobrol langsung sama dokter estetika — kenali kondisi kulitmu dan dapat rekomendasi treatment yang beneran cocok.</p>
       <div className="service-arrow">→</div>
     </div>
   </div>
@@ -149,7 +149,7 @@ export default function Home() {
   <div className="products-content">
     <div className="section-eyebrow reveal">Skincare Mugia</div>
     <h2 className="section-title reveal reveal-delay-1">Formulasi<br /><em>Dokter,</em><br /><strong>Untuk Rumahmu</strong></h2>
-    <p className="reveal reveal-delay-2">Rangkaian skincare Mugia dirancang oleh dokter estetika kami — tersertifikasi BPOM, bebas bahan berbahaya, dan efektif untuk berbagai kondisi kulit.</p>
+    <p className="reveal reveal-delay-2">Skincare Mugia diformulasikan khusus oleh dokter — udah BPOM, nggak ada bahan macem-macem, dan pastinya aman buat dipakai sehari-hari.</p>
     <div className="products-grid reveal reveal-delay-3">
       <div className="product-tag">Facial Wash Glowing</div>
       <div className="product-tag">Facial Wash Acne</div>
@@ -174,7 +174,7 @@ export default function Home() {
     <h2 className="section-title reveal reveal-delay-1" style={{ margin: "0 auto 1rem" }}>
       Ditangani Langsung<br />oleh <em>Dokter Ahli</em>
     </h2>
-    <p className="reveal reveal-delay-2">Tim dokter kami berpengalaman di bidang estetika dan dermatologi — siap memberikan penanganan terbaik dengan pendekatan yang hangat dan personal.</p>
+    <p className="reveal reveal-delay-2">Dokter-dokter kami nggak cuma ahli di estetika dan kulit — mereka juga ramah dan sabar nge-jelasin kondisi kulit kamu. Nggak perlu takut ditanyain macem-macem, karena di sini emang tempatnya nyaman.</p>
   </div>
   <div className="team-visual reveal reveal-delay-1">
     <img src="/img-1.jpg" alt="Tim Mugia Aesthetic Clinic" />
@@ -246,9 +246,9 @@ export default function Home() {
 <section className="cta" id="kontak">
   <div className="cta-label">Mulai Perjalananmu</div>
   <h2 className="cta-title reveal">Kulitmu Layak<br />Mendapat yang <em>Terbaik</em></h2>
-  <p className="cta-sub reveal reveal-delay-1">Konsultasi pertama gratis. Tim dokter kami siap membantu kamu menemukan program perawatan yang tepat sesuai kondisi kulitmu.</p>
+  <p className="cta-sub reveal reveal-delay-1">Mau tau treatment yang cocok buat kulitmu? Chat langsung sama tim dokter kami — nanti dibantu cari program perawatan yang pas.</p>
   <div className="cta-actions reveal reveal-delay-2">
-    <a href="https://wa.me/62XXXXXXXXXX?text=Halo+Mugia+Clinic,+saya+ingin+konsultasi+gratis" className="btn-white" target="_blank">Chat via WhatsApp</a>
+    <a href="https://wa.me/62XXXXXXXXXX?text=Halo+Mugia+Clinic,+saya+ingin+konsultasi" className="btn-white" target="_blank">Chat via WhatsApp</a>
     <a href="tel:+62XXXXXXXXXX" className="btn-outline-white">Hubungi Kami</a>
   </div>
 </section>

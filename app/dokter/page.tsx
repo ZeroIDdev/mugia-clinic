@@ -12,8 +12,8 @@ const doctors = [
     specialty: "Laser & Pigmentasi",
     experience: "5 Tahun",
     image: "/img-4.jpg",
-    desc: "Dengan pengalaman 5 tahun di bidang dermatologi estetika, Dr. Anisa mengkhususkan diri dalam treatment laser dan penanganan hiperpigmentasi. Keahliannya dalam mengombinasikan berbagai teknologi laser memastikan hasil yang optimal untuk setiap pasien.",
-    features: ["Laser Toning", "IPL Therapy", "Pigmentasi", "Skin Resurfacing"],
+    desc: "Dr. Anisa udah 5 tahun handle kulit pasien — mulai dari flek, noda bekas jerawat, sampai masalah warna kulit yang nggak merata. Dia jago banget pake laser buat bikin kulit lebih cerah dan bersih, hasilnya keliatan banget.",
+    features: ["Laser Toning", "IPL Therapy", "Treatment Flek", "Resurfacing"],
   },
   {
     num: "02",
@@ -21,8 +21,8 @@ const doctors = [
     specialty: "Acne & Skin Clearing",
     experience: "3 Tahun",
     image: "/img-1.jpg",
-    desc: "Dr. Rizky adalah spesialis dalam penanganan jerawat dan perbaikan tekstur kulit. Dengan pendekatan yang komprehensif — mulai dari diagnosa hingga program jangka panjang — ia membantu pasien mencapai kulit bersih dan sehat secara bertahap.",
-    features: ["Acne Treatment", "Chemical Peeling", "Injeksi Spot", "Program Kulit Bersih"],
+    desc: "Kalau kulit kamu berjerawat terus-menerus, Dr. Rizky solusinya. Dia paham banget gimana cara handle jerawat dari akarnya — nggak cuma ilangin, tapi juga jaga biar nggak balik lagi. Sabar dan teliti banget sama pasiennya.",
+    features: ["Treatment Jerawat", "Chemical Peeling", "Injeksi Spot", "Program Kulit Bersih"],
   },
   {
     num: "03",
@@ -30,7 +30,7 @@ const doctors = [
     specialty: "Brightening & Anti-Aging",
     experience: "4 Tahun",
     image: "/img-5.jpg",
-    desc: "Dr. Maya berfokus pada program mencerahkan kulit dan anti-aging. Kombinasi IV therapy, brightening laser, dan protokol perawatan yang dipersonalisasi menjadikan pendekatannya efektif dalam mengembalikan radiance alami kulit.",
+    desc: "Dr. Maya ahli bikin kulit cerah dan awet muda. Dengan perawatan yang disesuaikan sama kondisi kulit kamu — mulai dari vitamin infus, laser brightening, sampai collagen booster — kulit kamu bakal keliatan segar dan glowing alami.",
     features: ["Brightening Program", "Anti-Aging", "IV Therapy", "Collagen Booster"],
   },
 ];
@@ -129,12 +129,12 @@ export default function DokterPage() {
       {/* ─── CTA ─── */}
       <section className="cta" id="kontak">
         <div className="cta-label">Mulai Perjalananmu</div>
-        <h2 className="cta-title reveal">Konsultasi Gratis<br />dengan <em>Dokter Kami</em></h2>
+        <h2 className="cta-title reveal">Konsultasi<br />dengan <em>Dokter Kami</em></h2>
         <p className="cta-sub reveal reveal-delay-1">
-          Langkah pertama menuju kulit sehat. Tim dokter kami siap membantu kamu menemukan program perawatan yang tepat sesuai kondisi kulitmu.
+          Langkah pertama buat kulit sehat. Tim dokter kami siap bantu kamu cari perawatan yang cocok sesuai kondisi kulit kamu.
         </p>
         <div className="cta-actions reveal reveal-delay-2">
-          <a href="https://wa.me/62XXXXXXXXXX?text=Halo+Mugia+Clinic,+saya+ingin+konsultasi+gratis" className="btn-white" target="_blank" rel="noopener noreferrer">Chat via WhatsApp</a>
+          <a href="https://wa.me/62XXXXXXXXXX?text=Halo+Mugia+Clinic,+saya+ingin+konsultasi" className="btn-white" target="_blank" rel="noopener noreferrer">Chat via WhatsApp</a>
           <a href="tel:+62XXXXXXXXXX" className="btn-outline-white">Hubungi Kami</a>
         </div>
       </section>

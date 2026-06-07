@@ -6,24 +6,24 @@ import Footer from "../components/Footer";
 
 const faqs = [
   {
-    q: "Apakah konsultasi pertama gratis?",
-    a: "Ya, konsultasi pertama dengan dokter gratis. Kami percaya setiap perawatan harus dimulai dengan pemahaman mendalam tentang kondisi kulitmu.",
+    q: "Konsultasi dokter itu seperti apa?",
+    a: "Kamu langsung ketemu dokternya, ceritakan keluhan kulitmu, dan dokter akan kasih rekomendasi treatment yang paling cocok. Semuanya disesuaikan sama kondisi kulit kamu.",
   },
   {
     q: "Berapa lama hasil treatment terlihat?",
-    a: "Bervariasi tergantung jenis treatment dan kondisi kulit. Biasanya mulai terlihat setelah 2–4 sesi, dengan hasil optimal setelah program lengkap.",
+    a: "Bervariasi ya, tergantung jenis treatment dan kondisi kulit. Biasanya mulai terlihat setelah 2–4 sesi, dan hasil optimal setelah program lengkap.",
   },
   {
     q: "Apakah treatment aman untuk semua jenis kulit?",
-    a: "Ya, setiap treatment dikonsultasikan dulu dengan dokter. Kami menyesuaikan protokol perawatan berdasarkan jenis kulit dan kebutuhan spesifik kamu.",
+    a: "Aman! Setiap treatment selalu dikonsultasikan dulu sama dokter. Kami sesuaikan sama jenis kulit dan kebutuhan kamu, jadi nggak ada yang asal treatment.",
   },
   {
-    q: "Bagaimana cara booking?",
-    a: "Chat via WhatsApp atau datang langsung ke klinik. Tim kami akan membantu menjadwalkan waktu yang tepat untuk kamu.",
+    q: "Gimana cara booking?",
+    a: "Gampang banget, chat via WhatsApp atau datang langsung ke klinik. Tim kami bantu jadwalin waktu yang pas buat kamu.",
   },
   {
-    q: "Apakah perlu referensi dokter?",
-    a: "Tidak perlu. Kamu bisa langsung datang atau menghubungi kami untuk konsultasi. Dokter kami akan melakukan evaluasi dan rekomendasi di tempat.",
+    q: "Apakah perlu rujukan dokter?",
+    a: "Nggak perlu kok. Langsung aja datang atau hubungi kami. Dokter kami akan evaluasi dan kasih rekomendasi di tempat.",
   },
 ];
 
@@ -69,7 +69,7 @@ export default function KontakPage() {
       {/* ─── HERO ─── */}
       <section className="kt-hero">
         <div className="kt-hero-inner">
-          <div className="section-eyebrow reveal">Konsultasi Gratis</div>
+          <div className="section-eyebrow reveal">Konsultasi Dokter</div>
           <h1 className="section-title reveal">
             Mulai <em>Perjalanan</em><br />
             Kulit Sehatmu
@@ -167,10 +167,10 @@ export default function KontakPage() {
         <div className="cta-label">Siap Memulai?</div>
         <h2 className="cta-title reveal">Kulitmu Layak<br />Mendapat yang <em>Terbaik</em></h2>
         <p className="cta-sub reveal reveal-delay-1">
-          Konsultasi pertama gratis. Langsung chat via WhatsApp atau kunjungi klinik kami.
+          Langsung chat via WhatsApp atau kunjungi klinik kami buat mulai konsultasi.
         </p>
         <div className="cta-actions reveal reveal-delay-2">
-          <a href="https://wa.me/62XXXXXXXXXX?text=Halo+Mugia+Clinic,+saya+ingin+konsultasi+gratis" className="btn-white" target="_blank" rel="noopener noreferrer">Chat via WhatsApp</a>
+          <a href="https://wa.me/62XXXXXXXXXX?text=Halo+Mugia+Clinic,+saya+ingin+konsultasi" className="btn-white" target="_blank" rel="noopener noreferrer">Chat via WhatsApp</a>
           <a href="tel:+62XXXXXXXXXX" className="btn-outline-white">Hubungi Kami</a>
         </div>
       </section>
