@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState, useMemo } from "react";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -10,6 +10,8 @@ const services = [
     num: "01",
     name: "Laser &\nLight Therapy",
     tagline: "Kulit Bersih, Tanpa Ribet",
+    category: "Laser",
+    tags: ["bintik", "flek", "bekas jerawat", "pori", "kusam"],
     desc: "Treatment laser yang bisa atasi berbagai masalah kulit — dari bintik hitam, bekas jerawat, pori besar, sampe kulit kusam. Semuanya ditangani pakai teknologi laser terkini yang sudah terbukti aman.",
     detail: "Kulit jadi lebih cerah dan halus tanpa harus istirahat lama. Cocok buat kamu yang mau hasil nyata tapi nggak mau ganggu aktivitas sehari-hari.",
     image: "/layanan-01.jpg",
@@ -21,6 +23,8 @@ const services = [
     num: "02",
     name: "Acne &\nSkin Clearing",
     tagline: "Jerawat Hilang, Nggak Balik Lagi",
+    category: "Acne",
+    tags: ["jerawat", "bekas jerawat", "kulit berminyak"],
     desc: "Program jerawat yang nangani langsung ke akar masalahnya. Dokter akan cek dulu jenis dan penyebab jerawat kamu, terus susun perawatan yang pas — mulai dari facial treatment sampe perawatan intensif yang disesuin sama kondisi kulit kamu.",
     detail: "Bukan cuma ilangin jerawat yang ada, tapi juga cegah biar nggak dateng lagi. Setiap program beda-beda, karena kulit orang juga beda-beda.",
     image: "/layanan-02.jpg",
@@ -32,6 +36,8 @@ const services = [
     num: "03",
     name: "Custom\nBrightening",
     tagline: "Cerah Merata, Glowing Alami",
+    category: "Brightening",
+    tags: ["cerah", "glowing", "kusam", "brightening"],
     desc: "Treatment mencerahkan yang kerjanya dari dalam kulit, bukan cuma di permukaan. Dokter akan analisis dulu kondisi kulit kamu, terus susun kombinasi treatment di klinik plus skincare buat dirumah yang dipersonalisasi.",
     detail: "Perpaduan IV therapy, laser, dan peel yang bekerja bareng buat balikin kilau alami kulit kamu — hasilnya gradual tapi tahan lama.",
     image: "/layanan-03.jpg",
@@ -43,6 +49,8 @@ const services = [
     num: "04",
     name: "Micro Needling\n& RF",
     tagline: "Kulit Kencang, Pori Mengecil",
+    category: "Anti-Aging",
+    tags: ["kencang", "pori", "kolagen", "penuaan", "tekstur"],
     desc: "Treatment yang gabungin dua teknologi sekaligus — microneedling buat stimulasi kolagen alami, dan RF buatencangkan kulit dari dalam. Hasilnya kulit lebih kenyal dan tekstur rata.",
     detail: "Pori jadi lebih kecil, tekstur kulit lebih halus, dan rasanya lebih kencang. Cocok banget buat yang mulai khawatir sama tanda penuaan atau tekstur kulit nggak rata.",
     image: "/layanan-04.jpg",
@@ -54,6 +62,8 @@ const services = [
     num: "05",
     name: "Skincare\nCustom",
     tagline: "Skincare Dokter, Bukan Abal-abal",
+    category: "Skincare",
+    tags: ["skincare", "bpom", "glowing", "acne", "rumah"],
     desc: "Rangkaian skincare yang diformulasi langsung sama tim dokter estetika kami. Udah bersertifikat BPOM dan dirancang buat nemenin treatment kamu di klinik.",
     detail: "Ada dua seri utama: Glowing Series buat kulit kusam, dan Acne Series buat kulit berjerawat. Tinggal pilih yang sesuai sama kebutuhan kulit kamu.",
     image: "/layanan-05.jpg",
@@ -65,6 +75,8 @@ const services = [
     num: "06",
     name: "Konsultasi\nDokter",
     tagline: "Kenali Kulitmu, Mulai dari Sini",
+    category: "Konsultasi",
+    tags: ["konsultasi", "cek kulit", "program", "dokter"],
     desc: "Sebelum mulai treatment, dokter estetika kami akan cek kondisi kulit kamu secara detail. Nanti juga dibuatin program perawatan yang emang dirancang khusus buat kulit kamu.",
     detail: "Kami percaya transparansi itu penting — dokter bakal jelasin semuanya secara terbuka dan cuma rekomendasiin treatment yang emang kamu butuhin, nggak lebih.",
     image: "/layanan-06.jpg",
@@ -74,7 +86,26 @@ const services = [
   },
 ];
 
+const filterTags = ["Semua", "Laser", "Acne", "Brightening", "Anti-Aging", "Skincare", "Konsultasi"];
+
 export default function LayananPage() {
+  const [search, setSearch] = useState("");
+  const [activeFilter, setActiveFilter] = useState("Semua");
+
+  const filteredServices = useMemo(() => {
+    return services.filter((s) => {
+      const matchesSearch =
+        search === "" ||
+        s.name.toLowerCase().includes(search.toLowerCase()) ||
+        s.tagline.toLowerCase().includes(search.toLowerCase()) ||
+        s.desc.toLowerCase().includes(search.toLowerCase()) ||
+        s.tags.some((t) => t.toLowerCase().includes(search.toLowerCase()));
+      const matchesFilter =
+        activeFilter === "Semua" || s.category === activeFilter;
+      return matchesSearch && matchesFilter;
+    });
+  }, [search, activeFilter]);
+
   useEffect(() => {
     const reveals = document.querySelectorAll(".reveal");
     const observer = new IntersectionObserver(
@@ -120,8 +151,43 @@ export default function LayananPage() {
         </div>
       </section>
 
+      {/* Search + Filter */}
+      <div className="ln-search-section">
+        <div className="ln-search-toolbar">
+          <div className="ln-search">
+            <svg className="ln-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input
+              type="text"
+              placeholder="Cari treatment..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              className="ln-search-input"
+            />
+            {search && (
+              <button className="ln-search-clear" onClick={() => setSearch("")}>✕</button>
+            )}
+          </div>
+          <div className="ln-search-tags">
+            {filterTags.map((tag) => (
+              <button
+                key={tag}
+                className={`ln-search-tag ${activeFilter === tag ? "ln-search-tag--active" : ""}`}
+                onClick={() => setActiveFilter(tag)}
+              >
+                {tag}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* ─── SERVICES ─── */}
-      {services.map((service, i) => (
+      {filteredServices.length === 0 ? (
+        <div className="ln-empty">
+          <div className="ln-empty-icon">🔍</div>
+          <p>Treatment tidak ditemukan. Coba kata kunci atau filter lain.</p>
+        </div>
+      ) : filteredServices.map((service, i) => (
         <section key={service.num} className={`service-detail ${i % 2 === 1 ? "service-detail--reverse" : ""}`}>
           <div className="service-detail-img">
             <div className="service-detail-img-inner">

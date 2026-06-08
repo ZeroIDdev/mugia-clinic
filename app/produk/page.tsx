@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState, useMemo } from "react";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -10,6 +10,7 @@ const products = [
     id: 1,
     name: "Facial Wash Glowing",
     category: "Cleanser",
+    tags: ["wajah", "cerah", "glowing", "bersih"],
     desc: "Cuci muka yang bersih tapi tetap lembut — bikin wajah cerah tanpa bikin kulit ketarik atau kering. Cocok buat daily use.",
     price: "Rp 89.000",
     image: "/produk-01.jpg",
@@ -19,6 +20,7 @@ const products = [
     id: 2,
     name: "Facial Wash Acne",
     category: "Cleanser",
+    tags: ["jerawat", "minyak", "bersih"],
     desc: "Untuk kulit yang sering berjerawat — bantu kontrol minyak berlebih dan cegah jerawat datang lagi. Pakai rutin, hasilnya keliatan.",
     price: "Rp 89.000",
     image: "/produk-02.jpg",
@@ -28,6 +30,7 @@ const products = [
     id: 3,
     name: "Toner Glowing",
     category: "Toner",
+    tags: ["pori", "cerah", "glowing", "melembapkan"],
     desc: "Toner yang melembapkan sekaligus mencerahkan — pori-pori jadi keliatan lebih kecil. Wajib ada di routine setelah cuci muka.",
     price: "Rp 110.000",
     image: "/produk-03.jpg",
@@ -37,6 +40,7 @@ const products = [
     id: 4,
     name: "Toner Acne",
     category: "Toner",
+    tags: ["jerawat", "sensitif", "tenang", "kemerahan"],
     desc: "Khusus kulit sensitif dan berjerawat — bikin kulit lebih tenang, kemerahan berangsur-angsur hilang. Gentle tapi efektif.",
     price: "Rp 110.000",
     image: "/produk-04.jpg",
@@ -46,6 +50,7 @@ const products = [
     id: 5,
     name: "Sunscreen SPF 50",
     category: "Protection",
+    tags: ["matahari", "uv", "sehari-hari", "ringan"],
     desc: "Sunscreen yang nggak bikin wajah putih memutus — ringan, nggak lengket, dan cocok dipake setiap hari tanpa takut breakout.",
     price: "Rp 135.000",
     image: "/produk-05.jpg",
@@ -55,6 +60,7 @@ const products = [
     id: 6,
     name: "Night Cream",
     category: "Moisturizer",
+    tags: ["malam", "kenyal", "regenerasi", "tidur"],
     desc: "Biar kulit bekerja terus saat kamu tidur — bangun pagi dengan wajah yang lebih kenyal, cerah, dan fresh. Ritual malam yang worth it.",
     price: "Rp 165.000",
     image: "/produk-06.jpg",
@@ -62,7 +68,25 @@ const products = [
   },
 ];
 
+const categories = ["Semua", "Cleanser", "Toner", "Protection", "Moisturizer"];
+
 export default function ProdukPage() {
+  const [search, setSearch] = useState("");
+  const [activeCategory, setActiveCategory] = useState("Semua");
+
+  const filteredProducts = useMemo(() => {
+    return products.filter((p) => {
+      const matchesSearch =
+        search === "" ||
+        p.name.toLowerCase().includes(search.toLowerCase()) ||
+        p.desc.toLowerCase().includes(search.toLowerCase()) ||
+        p.tags.some((t) => t.toLowerCase().includes(search.toLowerCase()));
+      const matchesCategory =
+        activeCategory === "Semua" || p.category === activeCategory;
+      return matchesSearch && matchesCategory;
+    });
+  }, [search, activeCategory]);
+
   useEffect(() => {
     const reveals = document.querySelectorAll(".reveal");
     const observer = new IntersectionObserver(
@@ -107,8 +131,41 @@ export default function ProdukPage() {
 
       {/* Product Grid */}
       <section className="produk-grid-section">
+        <div className="produk-toolbar">
+          <div className="produk-search">
+            <svg className="produk-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input
+              type="text"
+              placeholder="Cari produk..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              className="produk-search-input"
+            />
+            {search && (
+              <button className="produk-search-clear" onClick={() => setSearch("")}>✕</button>
+            )}
+          </div>
+          <div className="produk-filters">
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                className={`produk-filter-btn ${activeCategory === cat ? "produk-filter-btn--active" : ""}`}
+                onClick={() => setActiveCategory(cat)}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {filteredProducts.length === 0 ? (
+          <div className="produk-empty">
+            <div className="produk-empty-icon">🔍</div>
+            <p>Produk tidak ditemukan. Coba kata kunci lain.</p>
+          </div>
+        ) : (
         <div className="produk-grid">
-          {products.map((product, i) => (
+          {filteredProducts.map((product, i) => (
             <div key={product.id} className={`produk-card reveal ${i % 3 === 1 ? "reveal-delay-1" : i % 3 === 2 ? "reveal-delay-2" : ""}`}>
               <div className="produk-card-img">
                 <img src={product.image} alt={product.name} />
@@ -126,6 +183,7 @@ export default function ProdukPage() {
             </div>
           ))}
         </div>
+        )}
       </section>
 
       {/* Why Section */}

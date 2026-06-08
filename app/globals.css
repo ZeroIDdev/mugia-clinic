@@ -1055,6 +1055,104 @@
   }
   .produk-card-btn:hover { color: var(--rose-deep); }
 
+  /* Toolbar (Search + Filter) */
+  .produk-toolbar {
+    display: flex; flex-direction: column; gap: 1.2rem;
+    margin-bottom: 2.5rem;
+  }
+  .produk-search {
+    position: relative; display: flex; align-items: center;
+    border-bottom: 1px solid rgba(232, 165, 165, 0.3);
+    padding-bottom: 0.5rem;
+  }
+  .produk-search-icon {
+    color: var(--muted); flex-shrink: 0; margin-right: 0.8rem;
+  }
+  .produk-search-input {
+    width: 100%; border: none; outline: none; background: transparent;
+    font-family: var(--font-dm-sans), sans-serif;
+    font-size: 0.9rem; color: var(--charcoal);
+    padding: 0.4rem 0;
+  }
+  .produk-search-input::placeholder { color: rgba(138, 112, 112, 0.5); }
+  .produk-search-clear {
+    background: none; border: none; color: var(--muted);
+    font-size: 0.8rem; cursor: pointer; padding: 0.2rem;
+    transition: color 0.3s;
+  }
+  .produk-search-clear:hover { color: var(--rose-deep); }
+  .produk-filters {
+    display: flex; gap: 0.6rem; flex-wrap: wrap;
+  }
+  .produk-filter-btn {
+    padding: 0.5rem 1.2rem; border: 1px solid rgba(232, 165, 165, 0.3);
+    background: transparent; font-family: var(--font-dm-sans), sans-serif;
+    font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--muted); cursor: pointer;
+    transition: all 0.3s;
+  }
+  .produk-filter-btn:hover { border-color: var(--mauve); color: var(--mauve); }
+  .produk-filter-btn--active {
+    background: var(--mauve); border-color: var(--mauve);
+    color: white;
+  }
+  .produk-empty {
+    text-align: center; padding: 5rem 2rem; color: var(--muted);
+    font-size: 0.95rem;
+  }
+  .produk-empty-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+
+  /* Layanan Search */
+  .ln-search-section {
+    padding: 2rem 4rem 0;
+    background: var(--cream);
+  }
+  .ln-search-toolbar {
+    display: flex; flex-direction: column; gap: 1.2rem;
+    max-width: 600px;
+  }
+  .ln-search {
+    position: relative; display: flex; align-items: center;
+    border-bottom: 1px solid rgba(232, 165, 165, 0.3);
+    padding-bottom: 0.5rem;
+  }
+  .ln-search-icon {
+    color: var(--muted); flex-shrink: 0; margin-right: 0.8rem;
+  }
+  .ln-search-input {
+    width: 100%; border: none; outline: none; background: transparent;
+    font-family: var(--font-dm-sans), sans-serif;
+    font-size: 0.9rem; color: var(--charcoal);
+    padding: 0.4rem 0;
+  }
+  .ln-search-input::placeholder { color: rgba(138, 112, 112, 0.5); }
+  .ln-search-clear {
+    background: none; border: none; color: var(--muted);
+    font-size: 0.8rem; cursor: pointer; padding: 0.2rem;
+    transition: color 0.3s;
+  }
+  .ln-search-clear:hover { color: var(--rose-deep); }
+  .ln-search-tags {
+    display: flex; gap: 0.6rem; flex-wrap: wrap;
+  }
+  .ln-search-tag {
+    padding: 0.5rem 1.2rem; border: 1px solid rgba(232, 165, 165, 0.3);
+    background: transparent; font-family: var(--font-dm-sans), sans-serif;
+    font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--muted); cursor: pointer;
+    transition: all 0.3s;
+  }
+  .ln-search-tag:hover { border-color: var(--mauve); color: var(--mauve); }
+  .ln-search-tag--active {
+    background: var(--mauve); border-color: var(--mauve);
+    color: white;
+  }
+  .ln-empty {
+    text-align: center; padding: 5rem 2rem; color: var(--muted);
+    font-size: 0.95rem; background: var(--cream);
+  }
+  .ln-empty-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+
   /* Why Section */
   .produk-why {
     background: var(--blush-light); padding: 6rem 4rem;
@@ -1228,6 +1326,7 @@
     .kt-contact { padding: 4rem 2rem; }
     .kt-contact-grid { grid-template-columns: 1fr; gap: 4rem; }
     .kt-faq { padding: 4rem 2rem; }
+    .ln-search-section { padding: 2rem 2rem 0; }
   }
   @media (max-width: 640px) {
     .ln-hero { padding: 7rem 1.5rem 2rem; }
@@ -1266,4 +1365,9 @@
     .kt-info-value { font-size: 1rem; }
     .kt-faq { padding: 3rem 1.5rem; }
     .kt-faq-q { font-size: 1rem; padding: 1.2rem 0; }
+    .produk-filters { gap: 0.4rem; }
+    .produk-filter-btn { padding: 0.4rem 0.8rem; font-size: 0.65rem; }
+    .ln-search-section { padding: 1.5rem 1.5rem 0; }
+    .ln-search-tags { gap: 0.4rem; }
+    .ln-search-tag { padding: 0.4rem 0.8rem; font-size: 0.65rem; }
   }
