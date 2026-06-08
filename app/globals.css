@@ -412,7 +412,7 @@
     filter: drop-shadow(0 20px 60px rgba(201, 125, 125, 0.25));
   }
   .team-certs {
-    display: flex; justify-content: center; gap: 4rem; margin-top: 4rem;
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem 4rem; margin-top: 4rem;
     padding-top: 4rem; border-top: 1px solid rgba(232, 165, 165, 0.3);
   }
   .cert-item { text-align: center; }
@@ -817,6 +817,7 @@
     .hero-img-wrap { clip-path: none; }
     .hero-badge { display: none !important; visibility: hidden !important; }
     .hero-stats { gap: 2rem; margin-top: 3rem; }
+    .team-certs { gap: 1.5rem 3rem; padding-top: 3rem; margin-top: 3rem; }
     .philosophy { grid-template-columns: 1fr; }
     .philosophy-visual { order: -1; height: 400px; }
     .philosophy-img-main { height: 100%; }
@@ -843,6 +844,8 @@
   @media (max-width: 640px) {
     .hero-title, .hero-title-line2 { font-size: 3rem; }
     .hero-stats { flex-wrap: wrap; gap: 1.5rem; }
+    .team-certs { gap: 1.5rem; padding-top: 2rem; margin-top: 2rem; }
+    .cert-num { font-size: 1.6rem; }
     .philosophy-features { grid-template-columns: 1fr; }
     .products-grid { grid-template-columns: 1fr; }
     .footer-top { grid-template-columns: 1fr; }
