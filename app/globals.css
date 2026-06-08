@@ -39,7 +39,6 @@
   }
   .nav-logo img {
     height: 36px;
-    filter: brightness(0.85) saturate(1.2);
   }
   .nav-links {
     display: flex; gap: 2.5rem; list-style: none;
