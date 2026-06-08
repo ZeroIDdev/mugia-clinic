@@ -762,6 +762,7 @@
     border: 1px solid rgba(232, 165, 165, 0.15);
     position: relative; overflow: hidden;
     transition: border-color 0.3s, transform 0.3s;
+    text-align: center;
   }
   .dk-stat-card:hover {
     border-color: var(--rose);
@@ -1341,7 +1342,7 @@
     .dk-doctor-info { padding: 3.5rem 2rem; }
     .dk-doctor-num { font-size: 6rem; bottom: 2rem; left: 2rem; }
     .dk-stats-section { padding: 5rem 2rem; }
-    .dk-stats-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; max-width: 600px; }
+    .dk-stats-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
     .kt-hero { padding: 7rem 2rem 2rem; }
     .kt-contact { padding: 4rem 2rem; }
     .kt-contact-grid { grid-template-columns: 1fr; gap: 4rem; }
